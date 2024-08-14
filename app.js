@@ -33,6 +33,7 @@ Exercise 3
 
 Solve Exercise 3 here:
 */
+console.log('Exercise 3 ')
 
 game.difficulty = ['Easy', 'Medium', 'Hard']
 
@@ -45,6 +46,7 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
+console.log('Exercise 4 ')
 
 game.party.push(pokemon[0])
 console.log(game)
@@ -57,6 +59,7 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
+console.log('Exercise 5 ')
 
 game.party.push(pokemon[4],pokemon[9], pokemon[14])
 console.log(game.party)
@@ -69,7 +72,7 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
-
+console.log("Exercise: 6")
 for (let i = 0; i < game.gyms.length; i++) {
     if (game.gyms[i].difficulty < 3) {
         game.gyms[i].completed = true
@@ -94,16 +97,15 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 
-// console.log('Exercise 7: ')
-// for (let i = 0; i < game.party.length; i++) {
-//     index = game.party[i].number
-//     console.log(index)
-//     game.party.splice(game.party[i], game.party.length, pokemon[index])
-// }
-// console.log(game) 
+console.log('Exercise 7: ')
 
-game.party.splice(game.party[0], game.party.length, pokemon[5], pokemon[10], pokemon[15])
-console.log(game) 
+const startingPokemon = game.party.findIndex(pokemon => pokemon.number === 1)
+
+if (startingPokemon !== -1) {
+  game.party.splice(startingPokemon, 1, pokemon[1])
+}
+
+console.log(game);
 
 /*
 Exercise 8
@@ -112,6 +114,8 @@ Exercise 8
 
 Solve Exercise 8 here:
 */
+console.log('Exercise 8 ')
+
 for (let i = 0; i < game.party.length; i++) {
     console.log(game.party[i].name)
 }
@@ -143,6 +147,8 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 
 Solve Exercise 10 here:
 */
+console.log('Exercise 10 ')
+
 game.catchPokemon = function (pokemonObj) {
  game.party.push(pokemonObj)
 }
@@ -161,7 +167,7 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
-
+console.log('Exercise 11 ')
 game.catchPokemon = function (pokemonObj) {
     game.party.push(pokemonObj)
 
@@ -179,6 +185,9 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
+
+console.log('Exercise 12 ')
+
 game.completeDifficulty6 = function () {
     for (let i = 0; i < game.gyms.length; i++) {
         if (game.gyms[i].difficulty < 6) {
